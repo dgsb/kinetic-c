@@ -1,0 +1,7 @@
+add_definitions(-D_XOPEN_SOURCE=500 -Wno-unused-parameter)
+add_executable(test_threadpool test_threadpool.c)
+add_executable(test_threadpool_sequencing test_threadpool_sequencing.c)
+add_executable(test_threadpool_stress test_threadpool_stress.c)
+target_link_libraries(test_threadpool kinetic-c-client pthread)
+target_link_libraries(test_threadpool_sequencing kinetic-c-client pthread)
+target_link_libraries(test_threadpool_stress kinetic-c-client pthread)
